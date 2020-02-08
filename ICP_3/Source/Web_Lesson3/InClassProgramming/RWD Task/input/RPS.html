@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Rock, Paper and Scissors Game!</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body bgcolor="white">
+<div style="text-align: center;margin-top: 15%">Enter Your Input Below!!  </br></br>
+    <input type="text" name="Input" id="userinput"></br></br>
+    <input type="button" value="Start Game" onclick="startGame()">
+</div>
+<script>
+    function getComputerChoice() {
+        switch(Math.floor(Math.random()*3)) {
+            case 0:
+                return 'rock';
+                break;
+            case 1:
+                return 'scissors';
+                break;
+            case 2:
+                return 'paper';
+                break;
+        };
+    }
+    function determineWinner(userChoice,computerChoice) {
+        if (userChoice === computerChoice) {
+            return 'It\'s a tie!';
+        } else if (userChoice === 'rock') {
+            if (computerChoice === 'paper') {
+                return 'Computer wins!';
+            } else {
+                return 'You win!';
+            }
+
+        } else if (userChoice === 'paper'){
+            if (computerChoice === 'scissors') {
+                return 'Computer wins!';
+            }else {
+                return 'You win!';
+            }
+        } else if (userChoice === 'scissors') {
+            if (computerChoice === 'rock') {
+                return 'Computer wins!';
+            } else {
+                return 'You win!';
+            }
+        } else if (userChoice === 'bomb') {
+            return 'You win!';
+        }
+    }
+
+
+    function startGame() {
+        let userInput1=document.getElementById("userinput").value;
+        console.log(userInput1);
+        let userChoice = userInput1;
+        let computerChoice = getComputerChoice();
+        console.log("Your Choice "+" " + userChoice);
+        console.log("Computers Input "+ computerChoice);
+        window.alert("Computer Input "+ computerChoice);
+        window.alert(determineWinner(userChoice,computerChoice));
+    };
+</script>
+</body>
+</html>
