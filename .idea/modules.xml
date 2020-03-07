@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/WebstormProjects/ICP7/.idea/ICP7.iml" filepath="$USER_HOME$/WebstormProjects/ICP7/.idea/ICP7.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/WebMobileProgramming.iml" filepath="$PROJECT_DIR$/.idea/WebMobileProgramming.iml" />
     </modules>
   </component>
